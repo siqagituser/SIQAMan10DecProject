@@ -41,7 +41,7 @@ packages:
   gitUsername: prabhakarsag
   gitBranch: main
 services:
-- serviceName: project.siqaman10dec.integrations:ssl_jdbc
+- serviceName: project.siqaman10dec.integrations:Alerttest
   packages:
   - name: SIQAMan10DecProject
     version: "1.0"
@@ -59,14 +59,10 @@ services:
     version: 10.3.0.0.32
     wpmServer: https://packages.webmethods.io
     wpmRegistry: softwareag
-- serviceName: SSL_JDBC_Test.services:insert_ssl
+- serviceName: pub.alert:emit
   packages:
-  - name: SSL_JDBC_Test
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.32
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: softwareag
+  - name: WmPublic
+    version: 11.1.0.0.2015
 configurationVariables:
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.maximumPoolSize
   : "10"
