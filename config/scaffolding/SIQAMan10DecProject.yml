@@ -13,15 +13,15 @@ packages:
   gitUrl: https://github.com/vijetadixit
   gitUsername: siqagituser
   gitBranch: Test
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: softwareag
 - name: TPP_services_in_FCS
   version: "1.0"
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
-  gitBranch: main
-- name: WmJDBCAdapter
-  wpmServer: https://packages.webmethods.io
-  wpmRegistry: softwareag
+  gitBranch: one_service
 services:
 - serviceName: project.siqaman10dec.integrations:SIQAAdapterFlow
   packages:
@@ -42,46 +42,46 @@ services:
 configurationVariables:
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.maximumPoolSize
   : "10"
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.keyStore
-  : ""
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.driverType
-  : Progress® DataDirect®
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.networkProtocol
-  : tcp
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.portNumber
   : "1433"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.serverName
+  : vmiboint01
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.heartBeatInterval
   : "0"
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.datasourceClass
-  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.user
-  : sa
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.trustStore
-  : ""
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.startupBackoffSecs
-  : "10"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.poolable
   : "false"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.dbType
   : MSSQL
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.databaseName
+  : SIQACloud
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.user
+  : sa
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.networkProtocol
+  : tcp
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionEnabled
   : "false"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.transactionType
   : NO_TRANSACTION
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.blockingTimeout
   : "1000"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.startupBackoffSecs
+  : "10"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.startupRetryCount
   : "0"
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.expireTimeout
-  : "1000"
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.databaseName
-  : SIQACloud
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.poolIncrementSize
   : "1"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.password
