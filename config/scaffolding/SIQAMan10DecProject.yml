@@ -22,6 +22,11 @@ packages:
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
   gitBranch: main
+- name: PackX
+  gitServerName: SIQAPsurGit
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: prabhakarsag
+  gitBranch: main
 services:
 - serviceName: project.siqaman10dec.integrations:SIQAAdapterFlow
   packages:
@@ -40,12 +45,12 @@ services:
   - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
 configurationVariables:
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.portNumber
-  : "1433"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.maximumPoolSize
   : "10"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionSettings.serverName
+  : vmiboint01
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.SIQAMan10DecProject.project.siqaman10dec.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_10Dec.connectionManagerSettings.poolable
