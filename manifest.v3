@@ -11,17 +11,18 @@
     <value name="SIQA_OriginTest_OnPremAssets">1.0</value>
     <value name="TPP_services_in_FCS">1.0</value>
     <value name="PackX">1.0</value>
+    <value name="PackY">1.0</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">27</value>
+  <value name="build">28</value>
   <null name="description"/>
   <value name="created_date">10-12-2024 14:23:44 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2024-12-10T14:32:14.059511916Z</value>
+  <value name="lastUpdated">2024-12-10T14:33:25.121509368Z</value>
   <value name="wmProjectId">fld4e4e051b2186ce9b587a2</value>
   <value name="creator">siqa auto</value>
 </Values>
